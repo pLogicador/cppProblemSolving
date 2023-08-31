@@ -7,6 +7,8 @@ Aqui você encontrará exercícios resolvidos em C++, baseados nos livros "C++ C
 
 Explore os códigos, faça perguntas e contribua com suas próprias soluções. Este repositório é um recurso útil para estudantes que estão utilizando os livros de Deitel e Stroustrup, fornecendo exemplos práticos e comentados.
 
-#### Observação: Este projeto não está associado ou endossado pelos autores H. M. Deitel, Paul Deitel ou Bjarne Stroustrup. Os exercícios são baseados no conteúdo dos livros, mas as soluções são independentes e desenvolvidas por mim.
+#### Este projeto não está associado ou endossado pelos autores H. M. Deitel, Paul Deitel ou Bjarne Stroustrup. Os exercícios são baseados no conteúdo dos livros, mas as soluções são independentes e desenvolvidas por mim.
+
+> *OBS*: O projeto ainda está em desenvolvimento ativo, e estarei adicionando mais recursos e conteúdo nos próximos dias e semanas.
 
 Divirta-se programando e bons estudos!
