@@ -1,0 +1,441 @@
+				Meu Glossário cpp
+
+Cap1
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Cap2
+
+. cadeias de caracteres são delimitados por aspas (")
+
+. \n - é um "caractere especial" que indica uma nova linha
+
+. cout - "see-out (character output stream)" se refere ao fluxo de saída padrão, utilizando o operador de saída "<<"
+
+.  // - qualquer coisa escrita após a barra duplicada em uma linha é um comentário
+
+. #include - instrui o computador a tornar disponível ("incluir") recursos de um arquivo std_lib_facilities.h (simplificação da biblioteca padrão C++)
+
+. Um arquivo #include geralmente possui um sufixo .h e é chamado de cabeçalho (header) ou arquivo cabeçalho
+
+. cabeçalho - contém definições de termos, tais como cout.
+
+. std_lib_facilities - é importante para tornar disponíveis os recursos do fluxo padrão E/S de C++
+
+. main - indica onde inicia a execução
+
+. int (em função) - "inteiro"  especifica o tipo do resultado, se houver 
+
+. () - lista de parametros
+
+. {} - "chaves" é o corpo da função
+
+. return 0; (devolvido por main) -  indica que o programa terminou com sucesso
+
+.   .cpp  ou .h ou .o - nomes dos arquivos  com código fonte ou do código-objeto
+
+
+
+
+
+Biblioteca :
+#include<iostream>
+#include<string>
+#include<vector>
+#include<algorithm>
+#include<cmath>
+using namespace std;
+inline void keep_window_open() { char ch; cin >> ch; }
+
+
+
+
+
+Cap3
+
+
+
+
+
+A.2 Literais
+- Literais representam valores de tipos diversos. Por exemplo, o literal 12 representa o valor inteiro “doze”, "manhã" representa o valor do string de caracteres 
+manhã e true representa o valor booleano true.
+
+
+
+
+A.2.1 Literais inteiros
+- Literais inteiros vêm em três variedades:
+	• Decimal: uma série de dígitos decimais
+		Dígitos decimais: 0, 1, 2, 3, 4, 5, 6, 7, 8 e 9
+	• Octal: uma série de dígitos octais iniciando com 0
+		Dígitos octais: 0, 1, 2, 3, 4, 5, 6 e 7
+	• Hexadecimal: uma série de dígitos hexadecimais iniciando com 0x ou 0X
+		Dígitos hexadecimais: 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, a, b, c, d, e, f, A, B, C, D, E e F
+
+- Um sufixo u ou U torna um literal unsigned (sem sinal) (§25.5.3) e um sufixo l ou  L torna-o long; por exemplo, 10u e 123456UL.
+
+
+A.2.1.1 Sistemas de numeração
+- Geralmente, escrevemos números em notação decimal. 123 representa 1 cento 
+mais 2 dezenas mais 3 unidades, ou 1*100+2*10+3*1, ou (usando ^ para representar “elevado à potência de”) 1*10^2+2*10^1+3*10^0.
+
+-  Outra palavra para decimal é base 10. Não existe aqui realmente nada de especial a respeito de 10. O que temos é 1*base^2+2*base^1+3*base^0 onde base==10. 
+- Existem muitas teorias sobre o porquê de usarmos a base 10. Uma teoria foi “construída” em algumas linguagens naturais: 
+temos dez dedos e cada símbolo, como 0, 1 e 2, que diretamente representam um valor em um sistema de numeração posicional, é chamado de dígito. 
+- Digitus é a palavra em latim para “dedo”.
+
+- Ocasionalmente, outras bases são usadas. Geralmente, valores inteiros na memória do computador são representados na base 2 (que é relativamente fácil de representar 0 e 1, 
+de forma confiável, por estados físicos em materiais), e humanos que tratam com questões de hardware de baixo nível algumas vezes usam a base 8 e, mais frequentemente, 
+a base 16, para se referir ao conteúdo de memória.
+
+
+Hexadecimal e binário
+hexa 	0	 1	 2	 3	 4	 5	 6	 7
+binário 	0000 	0001 	0010 	0011 	0100 	0101 	0110 	0111
+
+hexa 	8 	9 	A 	B 	C 	D 	E 	F
+binário 1000 	1001 	1010 	1011 	1100 	1101 	1110 	1111
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+A.2.2 Literais de ponto flutuante
+- Um literal de ponto flutuante contém um ponto decimal (.), um expoente (por ex., e3) ou um sufixo de ponto flutuante (d ou f ). Por exemplo:
+
+123 // int (sem ponto decimal, sufixo ou expoente)
+123. // double: 123.0
+123.0// double
+.123 // double: 0.123
+0.123// double
+1.23e3 // double: 1230.0
+1.23e–3 // double: 0.00123
+1.23e+3 // double: 1230.0
+
+
+
+Literais de ponto flutuante têm o tipo double, a menos que o sufixo indique outra coisa. Por exemplo:
+1.23 // double
+1.23f // float
+1.23L // long doubl
+
+
+
+A.2.3 Literais booleanos
+- Os literais do tipo bool são true e false. O valor inteiro de true é 1 e o valor inteiro  de false é 0.
+
+
+
+A.2.4 Literais de caracteres
+- Um literal de caractere é um caractere entre apóstrofes como, por exemplo, 'a' e  '@'. Além disso, existem alguns “caracteres especiais”:
+
+Nome 			Nome ASCII 		Nome C++
+nova linha 		NL 			\n
+tabulação horizontal 	HT 			\t
+tabulação vertical 		VT 			\v
+retrocesso 		BS 			\b
+retorno do carro 		CR 			\r
+alimentação de formulário 	FF 			\f
+alerta 			BEL 			\a
+barra invertida 		\ 			\\
+ponto de interrogação 	? 			\?
+apóstrofe 		'			\'
+aspa 			" 			\"
+número octal 		ooo 			\ooo
+número hexadecimal 	hhh 			\xhhh
+
+
+O conjunto de caracteres inclui os seguintes caracteres visíveis:
+
+	abcdefghijklmnopqrstuvwxyz
+	ABCDEFGHIJKLMNOPQRSTUVWXYZ
+	0123456789
+	!@#$%^&*()_+|~`{}[ ]:";'<>?,./
+
+
+
+A.2.5 Literais string
+
+Um literal string é uma série de caracteres entre aspas, como, por exemplo, "Knuth"
+e "King Canute". Uma nova linha não pode ser parte de um string; em vez disso, use 
+o caractere especial \n para representar nova linha em um string.
+
+	"King
+	Canute " 		// erro: nova linha em um literal string
+	"King\nCanute" 	// OK.: maneira correta de obter uma nova linha em um literal string
+
+
+Dois literais string separados apenas por espaços em branco são considerados 
+um único literal string. Por exemplo:
+
+	"King" "Canute" // equivalente a "KingCanute" (sem espaço)
+
+Note que caracteres especiais, tal como \n, podem aparecer em literais string.
+
+
+
+
+
+
+
+
+			****Tabela de operadores úteis para alguns tipos úteis e comuns*****
+
+bool char int double string
+atribuição =====
+soma + +
+concatenação +
+subtração – –
+multiplicação * *
+divisão / /
+resto (modulo) %
+incrementa de 1 ++ ++
+decrementa de 1 – – – –
+incrementa de n += n += n
+acrescenta ao final +=
+decrementa de n –= n –= n
+multiplica e atribui *= *=
+divide e atribui /= /=
+resto e atribui %=
+lê de s para x s >> x s >> x s >> x s >> x s >> x
+escreve x em s s << x s << x s << x s << x s << x
+igual == == == == ==
+não igual != != != != !=
+maior do que >>>>>
+maior ou igual a >= >= >= >= >=
+menor do que <<<<<
+menor ou igual a <= <= <= <= <=
+
+
+
+
+- Os vazios da tabela indicam que uma operação não está disponível diretamente para um tipo (embora possam existir maneiras indiretas de usar essa operação; ver §3.9.1).
+
+
+
+
+A.3 Identificadores
+	Um identificador é uma sequência de caracteres iniciando com uma letra ou um 
+	sublinhado seguido de zero ou mais letras (maiúsculas ou minúsculas), dígitos 
+	ou sublinhados:
+		int foo_bar; 	// OK
+		int FooBar; 	// OK
+		int foo bar; 	// erro: espaço não pode ser usado em um identificador
+		int foo$bar; 	// erro: $ não pode ser usado em um identificador
+	Identificadores iniciando com um sublinhado ou contendo um sublinhado duplo são reservados para uso da implementação; 
+	não os use. Por exemplo:
+		int _foo; 		// não
+		int foo_bar; 	// OK
+		int foo__bar; 	// não
+		int foo_; // 	// OK
+
+
+
+
+A.3.1 Palavras-chave
+	Palavras-chave são identificadores usados pela própria linguagem para expressar 
+	construtos da linguagem.
+
+	Palavras-chave (identificadores reservados)
+--------------------------------------------------------------------------------------------------------
+and 		and_eq 		asm 		auto 		bitand 		bitor
+bool 		break 		case 		catch 		char 		class
+compl 		const 		const_cast 	continue 		default 		delete
+do 		double 		dynamic_cast 	else 		enum 		explicit
+export 		extern 		false 		float 		for 		friend
+goto 		if 		inline 		int 		long 		mutable
+namespace 	new 		not 		not_eq 		operator 		or
+or_eq 		private 		protected 	public 		register 		reinterpret_cast
+return 		short 		signed 		sizeof 		static 		static_cast
+struct 		switch 		template 	this 		throw 		true
+try 		typedef 		typeid 		typename 	union 		unsigned
+using 		virtual 		void 		volatile 		wchar_t 		while
+xor 		xor_eq
+
+- Ao todo, 70 palavras-chave
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Cap4
+
+
+
+
+
+
+Cap5
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
