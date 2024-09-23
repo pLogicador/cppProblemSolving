@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1675142271 source:c:\users\edvaldo miranda\desktop\lingdeprm\aprendendolingc++\cap18\cap18test.010\main.cpp
+	<iostream>
+	<string>
+	<sstream>
+
